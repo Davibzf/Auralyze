@@ -13,6 +13,10 @@ Pipeline completo: **download de áudio → transcrição → resumo com Google 
 
 ---
 
+
+
+<img src="Imagens/Sonarize_Mascote" align="right" width="350">
+
 ## 📋 Índice
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Pipeline do Sistema](#-pipeline-do-sistema)
