@@ -279,7 +279,3 @@ fp16 = False     # Compatibilidade com CPU/GPU
 # Gemini
 modelo_gemini = "gemini-flash-lite-latest"  # Modelo leve e rápido
 ```
-
----
-
-Este README está pronto para ser colocado no seu repositório **Sonarize**! Quer que eu ajuste alguma seção ou crie algo mais específico?
