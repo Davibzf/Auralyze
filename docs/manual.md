@@ -154,6 +154,19 @@ torch==2.4.0  # Dependência do Whisper
 4. Copie a chave gerada
 5. Substitua no código: `api_key="SUA_API_KEY_AQUI"`
 
+### 6 .🎙️ Modelos e Idiomas Disponíveis
+Modelos Whisper
+O Whisper oferece diferentes tamanhos de modelo, cada um com equilíbrio entre velocidade e precisão. Para uso em português, recomendamos os modelos multilíngues (sem sufixo .en).
+
+| Tamanho | Parâmetros |       Modelo       | VRAM Necessária | Velocidade Relativa |           Ideal para           |
+|:-------:|:----------:|:------------------:|:---------------:|:-------------------:|:------------------------------:|
+|  tiny   |    39 M    |       `tiny`       |      ~1 GB      |         ~10x        | Testes rápidos, baixa precisão |
+|  base   |    74 M    |       `base`       |      ~1 GB      |         ~7x         | Uso geral, bom equilíbrio      |
+| small   |   244 M    |      `small`       |      ~2 GB      |         ~4x         | Maior precisão, ainda rápido   |
+| medium  |   769 M    |      `medium`      |      ~5 GB      |         ~2x         | Alta precisão                  |
+| large   |   1550 M   |      `large`       |     ~10 GB      |          1x         | Máxima precisão                |
+| turbo   |   809 M    |      `turbo`       |      ~6 GB      |         ~8x         | Otimizado, rápido e preciso    |
+
 ---
 
 ## 📖 Guia de Uso
