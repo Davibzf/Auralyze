@@ -9,7 +9,7 @@ def summarize_text():
         # Cria uma pergunta/prompt para a IA
         pergunta = f"""
     Faça um resumo breve do
-    contedudo: {conteudo}
+    conteúdo: {conteudo}
     """
 
     # Cria cliente com sua chave de API (autenticação)

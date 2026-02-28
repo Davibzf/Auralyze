@@ -7,7 +7,11 @@ def transcribe_audio():
       print("2 - base")
       print("3 - small")
       print("4 - medium")
-      versao = int(input("\n⚡ Escolha a versão do modelo (1-4): "))
+      while True:
+            versao = int(input("\n⚡ Escolha a versão do modelo (1-4): "))
+            if 1 <= versao <= 4:
+                  break
+            print("⚠️  Versão inválida. Tente novamente.")
 
       # Carrega o modelo "base" (equilibrado entre velocidade e precisão)
       # Outras opções: tiny, small, medium, large
