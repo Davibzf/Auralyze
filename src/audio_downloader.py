@@ -15,8 +15,8 @@ def download_audio():
 
     # Exibição das informações do vídeo
     print(f"\n📹 Título: {yt.title}")
-    duraçao = yt.length
-    print(f"⏱️ Duração: {duraçao // 60} minutos e {duraçao % 60} segundos")
+    duracao = yt.length
+    print(f"⏱️ Duração: {duracao // 60} minutos e {duracao % 60} segundos")
     print(f"👤 Autor: {yt.author}")
 
     # Download do áudio

@@ -15,8 +15,9 @@ def transcribe_audio():
 
       # Carrega o modelo "base" (equilibrado entre velocidade e precisão)
       # Outras opções: tiny, small, medium, large
-      modelo = whisper.load_model(f"{['tiny', 'base', 'small', 'medium'][versao-1]}")
-
+      modelos = ["tiny", "base", "small", "medium"]
+      modelo = whisper.load_model(modelos[versao-1])
+      print(f"Modelo '{modelos[versao-1]}' carregado com sucesso!")
 
       resultado = modelo.transcribe("audioyt.m4a",   # Transcreve o arquivo de áudio "audioyt.m4a"
                                     fp16=False,      # fp16=False: desativa precisão reduzida (compatibilidade)
@@ -25,8 +26,5 @@ def transcribe_audio():
 
 
 
-      with open("transcricao.txt",         # Salva a transcrição em um arquivo de texto
-            "w",                       # "w": modo escrita
-            encoding="utf-8") as f:    # encoding="utf-8": suporte a caracteres especiais
-      # resultado["text"] contém o texto transcrito
+      with open("transcricao.txt", "w", encoding="utf-8") as f:    
             f.write(resultado["text"])

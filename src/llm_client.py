@@ -4,17 +4,23 @@ def summarize_text():
 
 
     # Abre e lê o arquivo de transcrição criado anteriormente
-    with open('transcricao.txt', 'r') as arquivo:
-        conteudo = arquivo.read() # Lê todo o conteúdo do arquivo
-        # Cria uma pergunta/prompt para a IA
-        pergunta = f"""
-    Faça um resumo breve do
-    conteúdo: {conteudo}
-    """
+    while True:
+        try:
+            with open('transcricao.txt', 'r') as arquivo:
+                conteudo = arquivo.read() # Lê todo o conteúdo do arquivo
+                # Cria uma pergunta/prompt para a IA
+                pergunta = f"""
+            Faça um resumo breve do
+            conteúdo: {conteudo}
+            """
+            break
+        except:
+            print("Erro ao ler o arquivo de transcrição. Verifique se 'transcricao.txt' existe e está acessível. Tentando novamente...")
+        
 
     # Cria cliente com sua chave de API (autenticação)
     # Substitua "SUA_API_KEY_AQUI" pela sua chave real
-    genai.Client(api_key="SUA_API_KEY_AQUI")
+    cliente = genai.Client(api_key="SUA_API_KEY_AQUI")
 
     # Envia a pergunta para o modelo Gemini
     # model='gemini-flash-lite-latest': modelo rápido e leve
