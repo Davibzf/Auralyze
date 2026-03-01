@@ -19,7 +19,7 @@ def transcribe_audio():
       modelo = whisper.load_model(modelos[versao-1])
       print(f"Modelo '{modelos[versao-1]}' carregado com sucesso!")
 
-      resultado = modelo.transcribe("audioyt.mp3",   # Transcreve o arquivo de áudio "audioyt.m4a"
+      resultado = modelo.transcribe("audioyt.m4a",   # Transcreve o arquivo de áudio "audioyt.m4a"
                                     fp16=False,      # fp16=False: desativa precisão reduzida (compatibilidade)
                                     language ="pt")  # language="pt": força o idioma português
 
